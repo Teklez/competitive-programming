@@ -1,15 +1,15 @@
 class Solution:
     def corpFlightBookings(self, bookings: List[List[int]], n: int) -> List[int]:
-        res = [0]*(n + 1)
+        res = [0]*(n)
         for i, j , k in bookings:
-            res[i] += k
+            res[i - 1] += k
             if j  < n:
-                res[j + 1] -= k
+                res[j] -= k
 
         summ = 0
-        for j in range(n + 1):
+        for j in range(n):
             summ += res[j]
             res[j] = summ
-        return res[1:]
+        return res
 
         
