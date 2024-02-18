@@ -12,8 +12,7 @@ class Solution:
                 else:
                     k -= 1
         return count
-        # 4, 4, 3, 2
-        #     i
+
 
 
         
