@@ -13,7 +13,6 @@ class Solution:
             return result
         expression = []
         operators = {"*", "-", "+", "/"}
-        result = 0
         for token in tokens:
             if token in operators:
                 operand2 = expression.pop()
